@@ -1,0 +1,24 @@
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/crash.log
+
+terraform/*.tfvars
+terraform/*.tfvars.json
+
+# IDE
+.vscode/
+.idea/
+
+# Keys
+*.pem
+*.key
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
