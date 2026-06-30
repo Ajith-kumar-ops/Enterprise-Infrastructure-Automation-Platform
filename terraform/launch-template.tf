@@ -2,7 +2,7 @@ resource "aws_launch_template" "application" {
 
   name_prefix = "enterprise-app-"
 
-  image_id      = data.aws_ami.amazon_linux.id
+  image_id      = var.ami_id
   instance_type = "t2.micro"
 
   key_name = var.key_pair_name

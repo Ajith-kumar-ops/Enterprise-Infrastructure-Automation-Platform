@@ -45,3 +45,9 @@ variable "key_pair_name" {
   type        = string
   default     = "enterprise-key"
 }
+
+variable "ami_id" {
+  description = "Amazon Linux 2023 AMI"
+  type        = string
+  default     = "ami-0f2f85bcae7ec46bd"
+}
