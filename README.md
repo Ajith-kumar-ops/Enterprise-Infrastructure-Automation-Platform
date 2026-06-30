@@ -291,61 +291,42 @@ When an alarm is triggered, an email notification is sent using Amazon SNS.
 
 # 📸 Screenshots
 
-The following screenshots demonstrate the deployed infrastructure.
-
 ## GitHub Actions
 
-> `screenshots/github-actions.png`
+![GitHub Actions](screenshots/github-actions.png)
 
 ---
 
 ## Terraform Apply
 
-> `screenshots/terraform-apply.png`
+![Terraform Apply](screenshots/terraform-apply.png)
 
 ---
 
-## VPC
+## AWS VPC
 
-> `screenshots/vpc.png`
+![AWS VPC](screenshots/vpc.png)
 
 ---
 
 ## EC2 Instances
 
-> `screenshots/ec2.png`
+![EC2 Instances](screenshots/ec2.png)
 
 ---
 
 ## Application Load Balancer
 
-> `screenshots/alb.png`
+![Application Load Balancer](screenshots/alb.png)
 
 ---
 
 ## Auto Scaling Group
 
-> `screenshots/autoscaling.png`
+![Auto Scaling Group](screenshots/autoscaling.png)
 
 ---
 
-## CloudWatch Dashboard
-
-> `screenshots/cloudwatch-dashboard.png`
-
----
-
-## CloudWatch Alarms
-
-> `screenshots/cloudwatch-alarm.png`
-
----
-
-## AWS CodeDeploy
-
-> `screenshots/codedeploy.png`
-
----
 
 # 🔮 Future Enhancements
 
