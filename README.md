@@ -35,44 +35,64 @@ This project showcases real-world AWS infrastructure automation and DevOps best 
 
 ---
 
-# 🏗 Architecture
+# 🏗️ Architecture
+
+![Enterprise Infrastructure Architecture](diagrams/architecture.png)
+
+---
+
+## Architecture Overview
+
+This project provisions a production-ready AWS infrastructure using **Terraform** and **GitHub Actions** following Infrastructure as Code (IaC) best practices.
+
+### Components
+
+- 🌐 Multi-AZ VPC
+- 🛣️ Public & Private Subnets
+- 🌍 Internet Gateway
+- 🔒 NAT Gateway
+- 🖥️ Bastion Host
+- ⚖️ Application Load Balancer (ALB)
+- 📈 Auto Scaling Group (ASG)
+- 📋 Launch Template
+- 📊 CloudWatch Dashboard
+- 🚨 CloudWatch Alarms
+- 📧 SNS Notifications
+- 🚀 AWS CodeDeploy
+- 🔄 GitHub Actions CI/CD
+- 💾 Terraform Remote State (Amazon S3 + DynamoDB)
+
+---
+
+### Deployment Flow
 
 ```text
-                    GitHub Repository
-                           │
-                           ▼
-                  GitHub Actions CI
-                           │
-                           ▼
-                     Terraform Apply
-                           │
-                           ▼
-                    AWS Infrastructure
- ┌─────────────────────────────────────────────────────┐
- │                     AWS VPC                         │
- │                                                     │
- │ Public Subnet (AZ-1)                               │
- │ ├── Application Load Balancer                       │
- │ ├── NAT Gateway                                     │
- │ └── Bastion Host                                    │
- │                                                     │
- │ Public Subnet (AZ-2)                               │
- │ └── Application Load Balancer                       │
- │                                                     │
- │ Private Subnet (AZ-1)                              │
- │ └── Auto Scaling EC2 Instances                      │
- │                                                     │
- │ Private Subnet (AZ-2)                              │
- │ └── Auto Scaling EC2 Instances                      │
- │                                                     │
- │ CloudWatch                                          │
- │ SNS Notifications                                   │
- │ IAM Roles                                           │
- │ CodeDeploy                                          │
- └─────────────────────────────────────────────────────┘
+Developer
+    │
+    ▼
+Git Push
+    │
+    ▼
+GitHub Actions
+    │
+    ▼
+Terraform Init
+    │
+    ▼
+Terraform Validate
+    │
+    ▼
+Terraform Plan
+    │
+    ▼
+Terraform Apply
+    │
+    ▼
+AWS Infrastructure
+    │
+    ▼
+Application Deployment via CodeDeploy
 ```
-
-> **Note:** A graphical AWS architecture diagram will be added later in the `diagrams/` folder.
 
 ---
 
