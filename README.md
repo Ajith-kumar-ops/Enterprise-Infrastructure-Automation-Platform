@@ -27,11 +27,6 @@ This project demonstrates how to provision, manage, and deploy a production-styl
 - Terraform State Locking using DynamoDB
 - Modular Terraform Project Structure
 
-# 🏗️ Architecture
-
-![Enterprise Infrastructure Architecture](diagrams/architecture.png)
-
----
 
 ## 🏗️ Architecture
 
