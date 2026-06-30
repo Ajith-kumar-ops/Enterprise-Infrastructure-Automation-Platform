@@ -22,3 +22,7 @@ terraform/*.tfvars.json
 .DS_Store
 Thumbs.db
 desktop.ini
+# Terraform temporary files
+*.bak
+plan.txt
+*.tfplan
